@@ -98,11 +98,12 @@ export default function Header() {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                           {spielplan.map((item) => (
-                            <Link href={item.href} legacyBehavior>
-                              <a
-                                key={item.name}
-                                className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
-                              >
+                            <Link
+                              href={item.href}
+                              legacyBehavior
+                              key={item.name}
+                            >
+                              <a className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                                 <div className="ml-4">
                                   <p className="text-base font-medium text-gray-900">
                                     {item.name}
@@ -127,11 +128,8 @@ export default function Header() {
                 return null;
               } else {
                 return (
-                  <Link href={item.href} legacyBehavior>
-                    <a
-                      key={item.name}
-                      className="text-base font-medium text-gray-500 hover:text-gray-900"
-                    >
+                  <Link href={item.href} legacyBehavior key={item.name}>
+                    <a className="text-base font-medium text-gray-500 hover:text-gray-900">
                       {item.name}
                     </a>
                   </Link>
@@ -190,11 +188,8 @@ export default function Header() {
               <div className="py-6 px-5">
                 <div className="grid grid-cols-2 gap-4">
                   {navigation.map((item) => (
-                    <Link href={item.href} legacyBehavior>
-                      <a
-                        key={item.name}
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
-                      >
+                    <Link href={item.href} legacyBehavior key={item.name}>
+                      <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                         {item.name}
                       </a>
                     </Link>

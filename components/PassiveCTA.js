@@ -112,6 +112,7 @@ export default function PassiveCTA() {
                 className="block w-full cursor-pointer rounded-md border border-transparent bg-white py-3 px-5 text-center text-base font-medium text-black shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto"
                 href="https://checkout.stripe.com/c/pay/cs_live_a1cS5T9I93P2z3AheplsNdg6caobVEx4jsk5dvzeazOoFMuxEuVxzUr7FQ#fidkdWxOYHwnPyd1blppbHNgWjA0T2AwM11AUFVcNk9Ga1Bxbjd9dXVdaVxjc2pQVEdCVU1pYG58S0BsNVxCMU1xPVRiaG4wTXdCc11nPXVVMnFWYXdVXDBPNVY0RGdmQH9ocHZoZE5UQTxzNTVPX0JKVGltcCcpJ3VpbGtuQH11anZgYUxhJz8nY19gYVFSN1dGNkd8ZEYxYFBQJyknd2BjYHd3YHdKd2xibGsnPydtcXF1dj8qKnJycitjcHF2ZGlqaXxodWx0cGBnZHZgaStmbSoneCUl"
                 target="_blank"
+                rel="noreferrer"
               >
                 Jetzt Teil des Vereins werden
               </a>

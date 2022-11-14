@@ -10,7 +10,7 @@ export default function SponsorenLogoCloud({ data }) {
                 key={sponsor.id}
               >
                 <img className="h-12" src={sponsor.logo.url} alt="Tuple" />
-                <a href={sponsor.url} target="_blank">
+                <a href={sponsor.url} target="_blank" rel="noreferrer">
                   {sponsor.firma}
                 </a>
                 <p className="text-gray-600">{sponsor.paket}</p>
