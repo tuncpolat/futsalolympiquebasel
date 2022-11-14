@@ -1,26 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Agenda Bold */
+@font-face {
+  font-family: "Agenda Bold";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/Agenda-Bold.eot");
+  src: url("/fonts/Agenda-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Agenda-Bold.woff2") format("woff2"),
+    url("/fonts/Agenda-Bold.woff") format("woff"),
+    url("/fonts/Agenda-Bold.ttf") format("truetype"),
+    url("/fonts/Agenda-Bold.svg#Agenda-Bold") format("svg");
+}
+/* DIN Light */
+@font-face {
+  font-family: "DIN Light";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/DIN-Light.eot");
+  src: url("/DIN-Light.eot?#iefix") format("embedded-opentype"),
+    url("/DIN-Light.woff2") format("woff2"),
+    url("/DIN-Light.woff") format("woff"),
+    url("/DIN-Light.ttf") format("truetype"),
+    url("/DIN-Light.svg#DIN-Light") format("svg");
 }
 
-* {
-  box-sizing: border-box;
+/* latin-ext */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v18/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCGPrcVIT9d0c-dYA.woff)
+    format("woff");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v18/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff)
+    format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
