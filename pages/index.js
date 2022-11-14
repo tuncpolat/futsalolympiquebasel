@@ -34,8 +34,8 @@ export default function Home({
         gamesMen={dataUpcomingMen.spiele}
         gamesWomen={dataUpcomingWomen.spiele}
       />
+
       <Blog news={dataBlog} />
-      {/* <Newsletter /> */}
       <PassiveCTA />
     </>
   );

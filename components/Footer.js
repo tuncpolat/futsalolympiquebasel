@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const navigation = {
   spielplan: [
     {
@@ -76,14 +78,12 @@ export default function Footer() {
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
+                <Link key={item.name} href={item.href} legacyBehavior>
+                  <a className="text-gray-400 hover:text-gray-500">
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -96,12 +96,11 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.sitemap.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href} legacyBehavior>
+                        <a className="text-base text-gray-500 hover:text-gray-900">
+                          {item.name}
+                        </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -113,12 +112,11 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.spielplan.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href} legacyBehavior>
+                        <a className="text-base text-gray-500 hover:text-gray-900">
+                          {item.name}
+                        </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -130,12 +128,11 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href} legacyBehavior>
+                        <a className="text-base text-gray-500 hover:text-gray-900">
+                          {item.name}
+                        </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

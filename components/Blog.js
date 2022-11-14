@@ -1,10 +1,4 @@
-import {
-  MapPinIcon,
-  ClockIcon,
-  ChartBarSquareIcon,
-  ArrowRightIcon,
-  CalendarDaysIcon,
-} from "@heroicons/react/20/solid";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
 export default function Blog({ news, showAll = false }) {
@@ -37,24 +31,28 @@ export default function Blog({ news, showAll = false }) {
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
                   <p className="text-sm font-medium text-brand-blue">
-                    <a href={`news/${post.id}`} className="hover:underline">
-                      {post.kategorie === "Maenner"
-                        ? "Männer"
-                        : post.kategorie === "Frauen"
-                        ? "Frauen"
-                        : "Futsal Olympique Basel"}
-                    </a>
+                    <Link href={`news/${post.id}`} legacyBehavior>
+                      <a className="hover:underline">
+                        {post.kategorie === "Maenner"
+                          ? "Männer"
+                          : post.kategorie === "Frauen"
+                          ? "Frauen"
+                          : "Futsal Olympique Basel"}
+                      </a>
+                    </Link>
                   </p>
-                  <a href={`news/${post.id}`} className="mt-2 block">
-                    <p className="text-xl font-semibold text-gray-900">
-                      {post.title}
-                    </p>
-                    <p className="mt-3 text-base text-gray-500">
-                      {post.subtitle.length > 200
-                        ? post.subtitle.substr(0, 200) + "..."
-                        : post.subtitle.substr(0, 200)}
-                    </p>
-                  </a>
+                  <Link href={`news/${post.id}`} legacyBehavior>
+                    <a className="mt-2 block">
+                      <p className="text-xl font-semibold text-gray-900">
+                        {post.title}
+                      </p>
+                      <p className="mt-3 text-base text-gray-500">
+                        {post.subtitle.length > 200
+                          ? post.subtitle.substr(0, 200) + "..."
+                          : post.subtitle.substr(0, 200)}
+                      </p>
+                    </a>
+                  </Link>
                 </div>
                 <div className="mt-6 flex items-center justify-between text-sm text-gray-500">
                   <time dateTime={post.datum}>
@@ -64,13 +62,12 @@ export default function Blog({ news, showAll = false }) {
                       day: "numeric",
                     })}
                   </time>
-                  <a
-                    href={`news/${post.id}`}
-                    className="flex items-center gap-2 "
-                  >
-                    <p>Mehr lesen</p>
-                    <ArrowRightIcon width={15} />
-                  </a>
+                  <Link href={`news/${post.id}`} legacyBehavior>
+                    <a className="flex items-center gap-2">
+                      <p>Mehr lesen</p>
+                      <ArrowRightIcon width={15} />
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

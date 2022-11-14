@@ -30,12 +30,15 @@ export default function Hero({ title, subtitle, bgImage }) {
               </p>
               <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                 <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                  <a
-                    className="flex items-center cursor-pointer justify-center rounded-md border border-transparent bg-brand-orange px-4 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-blue sm:px-8"
-                    onClick={() => setOpen(true)}
-                  >
-                    Passivmitglied werden
-                  </a>
+                  <Link href="" legacyBehavior>
+                    <a
+                      className="flex items-center cursor-pointer justify-center rounded-md border border-transparent bg-brand-orange px-4 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-blue sm:px-8"
+                      onClick={() => setOpen(true)}
+                    >
+                      Passivmitglied werden
+                    </a>
+                  </Link>
+
                   <Link href="/kontakt" legacyBehavior>
                     <a className="flex items-center justify-center rounded-md border border-transparent bg-white bg-opacity-30 px-4 py-3 text-base font-bold text-white shadow-sm hover:bg-opacity-70 sm:px-8">
                       Kontakt
