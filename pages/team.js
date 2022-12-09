@@ -14,10 +14,10 @@ export default function Team({ data }) {
         />
         <meta name="description" content="Team Futsal Olympique Basel" />
       </Head>
-      <SimpleHeader title={"Team Männer"} />
-      <Squad data={data.men} />
       <SimpleHeader title={"Team Frauen"} />
       <Squad data={data.women} />
+      <SimpleHeader title={"Team Männer"} />
+      <Squad data={data.men} />
     </>
   );
 }

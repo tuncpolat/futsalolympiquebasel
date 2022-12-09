@@ -10,7 +10,7 @@ export default function Squad({ data }) {
             {data.map((person) => (
               <li key={person.name}>
                 <div className="space-y-4">
-                  <div className="aspect-w-3 aspect-h-2">
+                  <div className="aspect-w-4 aspect-h-5">
                     <img
                       className="rounded-lg object-cover shadow-lg"
                       src={
