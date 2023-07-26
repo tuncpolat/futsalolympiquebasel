@@ -1,6 +1,7 @@
 import Blog from "@/components/Blog";
 import Hero from "@/components/Hero";
 import PassiveCTA from "@/components/PassiveCTA";
+import SponsorenLogoCloud from "@/components/SponsorenLogoCloud";
 import Games from "@/components/upcoming/Games";
 import Head from "next/head";
 
@@ -9,6 +10,7 @@ export default function Home({
   dataUpcomingMen,
   dataUpcomingWomen,
   dataBlog,
+  dataSponsoren,
 }) {
   return (
     <>
@@ -30,6 +32,7 @@ export default function Home({
         subtitle={dataHome.hero.content}
         bgImage={dataHome.hero.background}
       />
+      <SponsorenLogoCloud data={dataSponsoren} backgroundColor="bg-gray-100" />
       <Games
         gamesMen={dataUpcomingMen.spiele}
         gamesWomen={dataUpcomingWomen.spiele}
@@ -66,6 +69,12 @@ export async function getServerSideProps() {
   );
   const dataBlog = await resBlog.json();
 
+  // Fetch data from external API: Home
+  const resSponsoren = await fetch(
+    `https://futsal-ob-strapi.herokuapp.com/sponsorenpage`
+  );
+  const dataSponsoren = await resSponsoren.json();
+
   // Pass data to the page via props
   return {
     props: {
@@ -73,6 +82,7 @@ export async function getServerSideProps() {
       dataUpcomingMen: dataUpcomingMen[0],
       dataUpcomingWomen: dataUpcomingWomen[0],
       dataBlog,
+      dataSponsoren: dataSponsoren.Sponsoren,
     },
   };
 }

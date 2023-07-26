@@ -10,6 +10,44 @@ export default function SponsorenContent({ data }) {
               <div className="mx-auto max-w-screen-md text-lg mb-8">
                 <h1>
                   <span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Unsere Sponsoren
+                  </span>
+                </h1>
+              </div>
+              <div className="space-y-4 max-w-screen-lg mx-auto">
+                {data.map((partner) => (
+                  <div
+                    key={partner.id}
+                    className="flex flex-col flex-col-reverse md:flex-row p-4 items-center justify-between md:p-8 bg-gray-100 rounded"
+                  >
+                    <div className="w-full md:w-2/3 md:mr-4">
+                      <h2 className="text-xl font-bold">{partner.firma}</h2>
+                      <h3 className="text-lg text-gray-500">{partner.paket}</h3>
+                      <p className="mt-2 text-gray-600">
+                        {partner.beschreibung}
+                      </p>
+                      <a
+                        href={partner.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-block mt-4 px-4 py-2 text-white bg-brand-blue hover:bg-brand-orange rounded"
+                      >
+                        Webseite besuchen
+                      </a>
+                    </div>
+                    <div className="w-full md:w-1/3 md:ml-4 mb-4 md:mb-0">
+                      <img
+                        src={partner.logo.url}
+                        alt={`${partner.firma} logo`}
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mx-auto max-w-screen-md text-lg pt-16 mb-8">
+                <h1>
+                  <span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
                     Neuanfang
                   </span>
                 </h1>
@@ -39,7 +77,6 @@ export default function SponsorenContent({ data }) {
                   Heimrunde, Schiedsrichter etc.)
                 </p>
               </div>
-              <SponsorenLogoCloud data={data} />
               <div className="mx-auto max-w-screen-md text-lg pt-16">
                 <h1>
                   <span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
