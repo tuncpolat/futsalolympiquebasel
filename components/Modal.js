@@ -66,7 +66,7 @@ export default function Modal({ open, setOpen, cancelButtonRef }) {
                     className="inline-flex w-full justify-center rounded-md border border-transparent bg-brand-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 sm:col-start-2 sm:text-sm"
                     onClick={() => {
                       window.open(
-                        "https://checkout.stripe.com/c/pay/cs_live_a1cS5T9I93P2z3AheplsNdg6caobVEx4jsk5dvzeazOoFMuxEuVxzUr7FQ#fidkdWxOYHwnPyd1blppbHNgWjA0T2AwM11AUFVcNk9Ga1Bxbjd9dXVdaVxjc2pQVEdCVU1pYG58S0BsNVxCMU1xPVRiaG4wTXdCc11nPXVVMnFWYXdVXDBPNVY0RGdmQH9ocHZoZE5UQTxzNTVPX0JKVGltcCcpJ3VpbGtuQH11anZgYUxhJz8nY19gYVFSN1dGNkd8ZEYxYFBQJyknd2BjYHd3YHdKd2xibGsnPydtcXF1dj8qKnJycitjcHF2ZGlqaXxodWx0cGBnZHZgaStmbSoneCUl",
+                        "https://buy.stripe.com/fZedTW2RC3ByaC4eUU",
                         "_blank"
                       );
                       setOpen(false);

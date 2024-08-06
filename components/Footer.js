@@ -72,7 +72,7 @@ export default function Footer() {
               <br />
               Erlenmattstrasse 110, 4058 Basel
               <br />
-              E: saschawinter@gmail.com,
+              E: winter.sascha92@gmail.com
               <br />
               Tel: +41 76 303 06 87
             </p>

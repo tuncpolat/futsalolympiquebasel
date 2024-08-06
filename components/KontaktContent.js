@@ -14,7 +14,7 @@ export default function KontaktContent() {
                 <p className="mt-8 text-sm md:text-xl leading-8 text-gray-500 text-center">
                   Futsal Olympique Basel
                   <br /> Erlenmattstrasse 110 4058 Basel
-                  <br /> E: saschawinter@gmail.com <br />
+                  <br /> E: winter.sascha92@gmail.com <br />
                   T: +41 76 303 06 87
                 </p>
               </div>
