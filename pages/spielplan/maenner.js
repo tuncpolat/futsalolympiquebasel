@@ -14,8 +14,8 @@ export default function Maenner({ data }) {
         />
       </Head>
       <SimpleHeader title={"Spielplan Männer"} />
-      {data.map((season) => (
-        <Season key={season.id} games={season.spiele} season={season.saison} />
+      {data.filter((season) => season.spiele.length > 0).map(({id, spiele, saison}) => (
+        <Season key={id} games={spiele} season={saison} />
       ))}
     </>
   );

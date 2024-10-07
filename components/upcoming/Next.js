@@ -19,7 +19,7 @@ export default function Next({ data }) {
           {data.heim === true ? (
             <Team />
           ) : (
-            <Team
+            data.opponent && <Team
               id={data.opponent.id}
               opponentName={data.opponent.name}
               notOB={true}
@@ -31,7 +31,7 @@ export default function Next({ data }) {
         </div>
         <div className="flex flex-col justify-center items-center basis-1/2">
           {data.heim === true ? (
-            <Team
+            data.opponent && <Team
               id={data.opponent.id}
               opponentName={data.opponent.name}
               notOB={true}
